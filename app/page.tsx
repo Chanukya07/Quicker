@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   const features = [
     {
@@ -38,12 +40,12 @@ export default function Home() {
           trends, recurring charges, and anomaly alerts.
         </p>
         <div className="actions">
-          <button className="button buttonPrimary" type="button">
+          <a className="button buttonPrimary" href="#connect-gmail">
             Connect Gmail
-          </button>
-          <button className="button buttonSecondary" type="button">
+          </a>
+          <a className="button buttonSecondary" href="#demo-flow">
             View Demo Flow
-          </button>
+          </a>
         </div>
       </section>
 
@@ -77,9 +79,33 @@ export default function Home() {
       <section className="section cta">
         <h2>Ready to replace inbox chaos with spending clarity?</h2>
         <p>Set up your account and start your first Gmail sync.</p>
-        <button className="button buttonPrimary" type="button">
+        <a className="button buttonPrimary" href="#connect-gmail">
           Get Started
-        </button>
+        </a>
+      </section>
+
+      <section className="section" id="connect-gmail">
+        <h2>Connect Gmail</h2>
+        <p>
+          Connect your Google account with Gmail read-only permissions, then
+          trigger your first sync.
+        </p>
+        <ol className="list">
+          <li>Sign in with Google from your dashboard.</li>
+          <li>Approve Gmail read-only access on the consent screen.</li>
+          <li>Click Sync Now to start extracting transactions.</li>
+        </ol>
+      </section>
+
+      <section className="section" id="demo-flow">
+        <h2>Demo Flow</h2>
+        <p>
+          Use the guided demo sequence to show sign-in, sync, and dashboard
+          results.
+        </p>
+        <Link className="button buttonSecondary" href="/demo">
+          Open Demo Script
+        </Link>
       </section>
     </main>
   );
