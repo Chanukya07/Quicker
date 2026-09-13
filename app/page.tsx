@@ -25,7 +25,11 @@ export default function Home() {
   ];
 
   return (
-    <main className="page">
+    <main
+      id="main-content"
+      tabIndex={-1}
+      className="page focus:outline-none"
+    >
       <section className="hero">
         <p className="badge">Quicker • Gmail Spend Intelligence</p>
         <h1>Understand your email-based spending in minutes.</h1>
