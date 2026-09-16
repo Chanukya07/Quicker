@@ -24,7 +24,7 @@ export default function Home() {
       <nav className="nav shell" aria-label="Primary navigation">
         <Link className="brand" href="/" aria-label="Quicker home"><span className="brandMark"><Zap size={18} fill="currentColor" /></span> quicker</Link>
         <div className="navLinks"><a href="#features">Features</a><a href="#security">Security</a><Link href="/demo">Demo</Link></div>
-        <Link className="navCta" href="/analyze">Connect Gmail <ArrowRight size={16} /></Link>
+        <Link className="navCta" href="/demo">Open live demo <ArrowRight size={16} /></Link>
       </nav>
 
       <section className="heroLanding shell">
