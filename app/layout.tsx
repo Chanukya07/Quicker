@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
+import "./quicker.css";
 
 export const metadata: Metadata = {
   title: "Quicker",
@@ -21,6 +23,13 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <footer className="siteLegalFooter">
+          <span>© 2026 Quicker</span>
+          <nav aria-label="Legal information">
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms of Service</Link>
+          </nav>
+        </footer>
       </body>
     </html>
   );

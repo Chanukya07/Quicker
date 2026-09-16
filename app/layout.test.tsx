@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import RootLayout, { metadata } from './layout'
 import React from 'react'
 
@@ -48,6 +48,8 @@ describe('RootLayout', () => {
     // The child should be rendered
     const child = getByText('Test Child Content');
     expect(child).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Privacy Policy' })).toHaveAttribute('href', '/privacy');
+    expect(screen.getByRole('link', { name: 'Terms of Service' })).toHaveAttribute('href', '/terms');
   });
 
   it('exports metadata correctly', () => {
