@@ -10,5 +10,7 @@ describe('Home page', () => {
     expect(screen.getByText('Clarity at a glance')).toBeInTheDocument()
     expect(screen.getByText('Spot what changed')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Analyze my inbox' })).toHaveAttribute('href', '/analyze')
+    expect(screen.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy')
+    expect(screen.getByRole('link', { name: 'Terms' })).toHaveAttribute('href', '/terms')
   })
 })

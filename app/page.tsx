@@ -85,7 +85,7 @@ export default function Home() {
       <section className="howSection shell" id="how-it-works"><div className="howCard"><div><span className="sectionKicker">PRIVATE BY DESIGN</span><h2>Read-only access.<br />Always in your control.</h2><p>Quicker requests read-only Gmail access and stores structured purchase details—not raw email bodies. Disconnect whenever you want.</p><ul><li><Check size={15}/> Google OAuth sign-in</li><li><Check size={15}/> No raw email storage</li><li><Check size={15}/> One-click disconnect</li></ul></div><div className="securitySeal" id="security"><div className="sealRings"><span><ShieldCheck size={46}/></span></div><strong>You stay in control</strong><small>Read-only Gmail access</small></div></div></section>
 
       <section className="finalCta shell"><div><span className="sectionKicker">READY WHEN YOU ARE</span><h2>Make sense of your spending.</h2><p>Connect Gmail and let Groq AI turn your receipts into structured insights.</p></div><Link className="primaryCta light" href="/analyze"><Mail size={18}/> Connect Gmail <ArrowRight size={17}/></Link></section>
-      <footer className="footer shell"><Link className="brand" href="/"><span className="brandMark"><Zap size={18} fill="currentColor" /></span> quicker</Link><p>Spend smarter, without trying harder.</p><span>© 2026 Quicker</span></footer>
+      <footer className="footer shell"><Link className="brand" href="/"><span className="brandMark"><Zap size={18} fill="currentColor" /></span> quicker</Link><p>Spend smarter, without trying harder.</p><nav aria-label="Legal"><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><span>© 2026 Quicker</span></nav></footer>
     </main>
   );
 }

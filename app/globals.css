@@ -1946,3 +1946,143 @@ button {
     animation:none;
   }
 }
+
+/* Legal pages */
+.footer nav {
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.footer nav a {
+  color:var(--muted);
+  font-weight:700;
+}
+
+.footer nav a:hover {
+  color:var(--purple);
+}
+
+.privacyNote a,
+.legalDocument a {
+  color:var(--purple);
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.legalPage {
+  min-height:100vh;
+  padding-bottom:80px;
+  background:
+    radial-gradient(circle at 50% 0,#ebe7ff 0,transparent 28%),
+    var(--cream);
+}
+
+.legalNav {
+  width:min(960px,calc(100% - 40px));
+  height:80px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.legalNav>a:last-child {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:700;
+}
+
+.legalDocument {
+  width:min(820px,calc(100% - 32px));
+  margin:38px auto 0;
+  padding:clamp(32px,6vw,68px);
+  background:white;
+  border:1px solid var(--line);
+  border-radius:22px;
+  box-shadow:0 24px 70px #42366012;
+}
+
+.legalDocument header {
+  padding-bottom:34px;
+  border-bottom:1px solid var(--line);
+}
+
+.legalIcon {
+  width:52px;
+  height:52px;
+  margin-bottom:20px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  background:var(--lavender);
+  color:var(--purple);
+}
+
+.legalDocument h1 {
+  margin:12px 0 8px;
+  font-family:Georgia,serif;
+  font-size:clamp(38px,6vw,56px);
+  letter-spacing:-2px;
+}
+
+.legalDocument header>p:last-child,
+.legalDocument section p {
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.75;
+}
+
+.legalUpdated {
+  margin:0 0 22px;
+  color:#96919f;
+  font-size:11px;
+  font-weight:700;
+}
+
+.legalDocument section {
+  padding:27px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.legalDocument section h2 {
+  margin:0 0 10px;
+  font-family:Georgia,serif;
+  font-size:21px;
+}
+
+.legalDocument section p {
+  margin:0;
+}
+
+.legalFooter {
+  padding-top:30px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-size:13px;
+}
+
+@media(max-width:620px) {
+  .footer nav {
+    gap:12px;
+  }
+
+  .footer nav span {
+    display:none;
+  }
+
+  .legalDocument {
+    margin-top:15px;
+    border-radius:16px;
+  }
+
+  .legalFooter {
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}

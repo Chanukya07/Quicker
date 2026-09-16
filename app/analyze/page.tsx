@@ -67,7 +67,7 @@ export default function AnalyzePage() {
       <p>{status === "done" ? summary : "Connect Gmail with read-only access. Quicker finds receipt-like messages and asks Groq AI to extract structured purchases."}</p>
       {status !== "done" && <button className="googleButton" onClick={connectGmail} disabled={status !== "idle"} type="button">{status === "idle" ? <><Mail size={18}/> Connect Gmail securely</> : <><LoaderCircle className="spin" size={18}/> {status === "authorizing" ? "Waiting for Google…" : "Analyzing receipts…"}</>}</button>}
       {error && <div className="connectError" role="alert">{error}</div>}
-      <div className="privacyNote"><ShieldCheck size={16}/><span><strong>Read-only and temporary.</strong> Email metadata is processed for this request and is not stored by Quicker.</span></div>
+      <div className="privacyNote"><ShieldCheck size={16}/><span><strong>Read-only and temporary.</strong> Email metadata is processed for this request and is not stored by Quicker. By continuing, you agree to our <Link href="/terms">Terms</Link> and acknowledge our <Link href="/privacy">Privacy Policy</Link>.</span></div>
     </section>
     {status === "done" && <section className="analysisResults">
       <div className="analysisSummary"><article><small>TRANSACTIONS FOUND</small><strong>{transactions.length}</strong></article><article><small>ANALYZED TOTAL</small><strong>{transactions[0]?.currency ?? "USD"} {total.toFixed(2)}</strong></article><article><small>AI ENGINE</small><strong><Sparkles size={18}/> Groq</strong></article></div>
